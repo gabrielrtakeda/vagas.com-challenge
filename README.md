@@ -15,11 +15,14 @@ Foram utilizadas basicamente as seguintes ferramentas:
    - Babel (ES6 syntax polyfill)
    - Webpack
 
+ - **Data**:
+   - Youtube Data API V3
+
 # Take a look!
 ### Dependencies
 Para subir o projeto é bem simples, basta ter instalado na sua máquina o
 [NodeJS](https://nodejs.org/en/). Abra uma tela de terminal qualquer, navegue
-até a raiz do projeto e execute `npm install` na raiz do projeto.
+até a raiz do projeto e execute `npm install` (aguarde...) na raiz do projeto.
 
 E em seguinda execute `npm start`. Pronto, o Webserver já está em
 execução e é possível visualizar o webapp através do caminho `127.0.0.1:3000`.
