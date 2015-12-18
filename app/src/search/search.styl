@@ -1,0 +1,47 @@
+@import '../styles/variables/colors'
+@import '../styles/variables/sizes'
+@import '../styles/mixins'
+
+section.search
+  > article
+    .video-thumbnails-container
+      video-thumbnail
+        margin-top 0
+        margin-bottom 16px
+
+    .load
+      .spinner
+        margin-top 16px
+
+      &.request
+        .spinner
+          display block
+        .btn-default
+          display none
+
+      button
+        margin 16px 0 0
+        padding-top 8px
+        padding-bottom 8px
+        color load-more-videos-button-text-color
+        font-family 'Lato', sans-serif
+        font-weight: 700
+        text-transform uppercase
+        height auto
+        line-height 0.7rem
+        font-size(9px)
+
+      .btn-default
+        &:hover
+          background-color load-more-videos-button-color-hover
+          border-color load-more-videos-button-color-hover
+          color load-more-videos-button-text-color-hover
+
+        &:active, &:focus
+          background-color load-more-videos-button-color-active
+          border-color load-more-videos-button-color-active
+          color load-more-videos-button-text-color-hover
+          outline none
+
+        &.finish
+          display none

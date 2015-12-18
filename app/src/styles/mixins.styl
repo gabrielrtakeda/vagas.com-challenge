@@ -1,0 +1,47 @@
+@import './variables/sizes'
+
+font-size(value) {
+  font-size: remify(value);
+}
+
+remify(value) {
+  u = unit(value);
+
+  if (u is 'px') {
+    return unit(value/font-size-default, 'rem');
+  } else {
+    return unit(value, u);
+  }
+}
+
+carot-top(size=10px, color=#fff) {
+  content ''
+  border-bottom size solid color
+  border-left size solid transparent
+  border-right size solid transparent
+  border-top size solid transparent
+}
+
+border-radius(size=5px) {
+  -webkit-border-radius size
+  -moz-border-radius size
+  border-radius size
+}
+
+remove-input-glow() {
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+box-shadow(arguments) {
+  -moz-box-shadow: arguments;
+  -webkit-box-shadow: arguments;
+  box-shadow: arguments;
+}
+
+filter(arguments) {
+  -webkit-filter arguments
+  filter arguments
+}

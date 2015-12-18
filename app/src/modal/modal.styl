@@ -1,0 +1,87 @@
+@import '../styles/variables/colors'
+@import '../styles/variables/sizes'
+@import '../styles/mixins'
+
+.modal-backdrop
+  background-color #fff
+  opacity .7
+
+.modal
+  .modal-dialog
+    margin 0
+    width 100%
+
+    .modal-content
+      border 1px solid cards-border-color
+      box-shadow(0 2px 2px 0 rgba(0, 0, 0, .3))
+      border-radius(0)
+
+      .modal-header
+        padding 19px 22px
+        border none
+
+        button.close
+          background-color #fff
+          color #f40000
+          opacity 1
+          width 19px
+          height 19px
+          border-radius(19px)
+          font-size(9px)
+
+          &:hover
+            background-color #f40000
+            color #fff
+
+          &:active, &:focus
+            background-color #c4161c
+            color #fff
+
+      .modal-body
+        padding 0 22px 22px
+        text-align left
+
+        h4
+          position relative
+          margin 22px 0 18px
+
+          .title
+            width 80%
+
+          .infos
+            position absolute
+            right 0
+            top 0
+
+            > span[class*='icon-']
+              color cards-infos-color
+              margin-left 8px
+
+              &:hover
+                opacity .8
+
+              & + div *
+                white-space nowrap
+
+        p
+          max-height 120px
+          overflow auto
+
+@media (min-width 768px)
+  .modal
+    .modal-dialog
+      width 600px
+      margin-left -300px
+      left 50%
+
+@media screen and (min-width: 768px)
+  .modal:before
+    display inline-block
+    vertical-align middle
+    content ""
+    height 100%
+
+.modal-dialog
+  display inline-block
+  text-align center
+  vertical-align middle

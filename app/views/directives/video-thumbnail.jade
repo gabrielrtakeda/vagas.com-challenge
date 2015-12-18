@@ -1,0 +1,15 @@
+a.video-thumbnail(
+  href='#'
+  ng-click='videoThumbnail.showModal()'
+)
+  .thumbnail
+    img(
+      src='{{videoThumbnail.video.thumbnail}}'
+      alt='{{videoThumbnail.video.title}}'
+    )
+
+  .data
+    h4 {{videoThumbnail.video.title}}
+    .infos
+      span.icon-views
+      span {{videoThumbnail.video.viewCount}}

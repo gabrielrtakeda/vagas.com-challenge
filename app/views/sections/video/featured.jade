@@ -1,0 +1,33 @@
+section.video-featured.col-md-7.col-sm-12.col-xs-12(
+  ng-controller='FeaturedController as featured'
+)
+  header
+    h1 Vídeo em destaque
+
+  article
+    fluid-video(
+      width='{{::featured.video.width}}'
+      height='{{::featured.video.height}}'
+      src='{{::featured.video.src}}'
+    )
+
+  footer
+    .card-description(
+      ng-click='featured.toggle()'
+      ng-class='{folded: featured.folded === true}'
+    )
+      .piece-header
+        h4
+          .title {{::featured.video.title}}
+          .infos
+            span.icon-views(
+              uib-tooltip='{{::featured.video.views}}',
+              tooltip-placement='top',
+              tooltip-trigger='mouseenter'
+            )
+            span.icon-date(
+              uib-tooltip='{{::featured.video.publishedAt}}',
+              tooltip-placement='top',
+              tooltip-trigger='mouseenter'
+            )
+      p(ng-bind-html='::featured.video.description')

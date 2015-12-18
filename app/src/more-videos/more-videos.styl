@@ -1,0 +1,62 @@
+@import '../styles/variables/colors'
+@import '../styles/variables/sizes'
+@import '../styles/mixins'
+
+section.more-videos
+
+  & > article
+    border 1px solid cards-border-color
+    padding 16px
+    height 503px
+    overflow hidden
+    box-shadow(0 2px 2px 0 rgba(0, 0, 0, .3))
+
+    &.finish
+      .video-thumbnails-container
+        height 469px
+
+      .load
+        display none
+
+    .video-thumbnails-container
+      height 428px
+      overflow auto
+
+    .load
+      .spinner
+        margin-top 16px
+
+      &.request
+        .spinner
+          display block
+
+      button
+        margin 16px 0 0
+        padding-top 8px
+        padding-bottom 8px
+        color load-more-videos-button-text-color
+        font-family 'Lato', sans-serif
+        font-weight: 700
+        text-transform uppercase
+        height auto
+        line-height 0.7rem
+        font-size(9px)
+
+      .btn-default
+        &:hover
+          background-color load-more-videos-button-color-hover
+          border-color load-more-videos-button-color-hover
+          color load-more-videos-button-text-color-hover
+
+        &:active, &:focus
+          background-color load-more-videos-button-color-active
+          border-color load-more-videos-button-color-active
+          color load-more-videos-button-text-color-hover
+          outline none
+
+  @media (min-width 1200px)
+    & > article
+      height 550px
+
+      .video-thumbnails-container
+        height 475px

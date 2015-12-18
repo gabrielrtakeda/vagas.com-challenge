@@ -1,0 +1,25 @@
+section.search(
+  ng-controller='SearchController as search'
+)
+  header
+    h1 Resultado para: "{{search.q}}"
+
+  article
+    .video-thumbnails-container
+      video-thumbnail.col-md-4.col-sm-6.col-xs-12(
+        ng-repeat='item in search.list'
+        description='{{item.description}}'
+        publishedAt='{{item.publishedAt}}'
+        src='{{item.src}}'
+        thumbnail='{{item.thumbnail}}'
+        title='{{item.title}}'
+        view-count='{{item.viewCount}}'
+      )
+
+    .load(ng-class='{request: search.spinner === true}')
+      .spinner
+      button.btn.btn-default.form-control(
+        ng-click='search.loadMoreVideos()'
+        ng-class='{finish: search.finish === true}'
+      )
+        | Carregar mais vídeos...

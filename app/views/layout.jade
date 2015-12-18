@@ -1,0 +1,15 @@
+doctype html
+html(lang='pt-BR')
+  head
+    title= title
+    base(href='/')
+    meta(name='viewport' content='width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no')
+    link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600|Lato:400,700')
+    script(type='text/javascript' src='/build.js')
+  body
+    include ./includes/header.jade
+    article
+      .container
+        block content
+
+      modal

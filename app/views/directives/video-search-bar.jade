@@ -1,0 +1,13 @@
+a.glyphicon.glyphicon-search(href='#')
+
+form(
+  role='search'
+  ng-submit='searchBar.submit()'
+)
+  .form-group
+    input.form-control.q(
+      type='text'
+      placeholder='Search'
+      ng-model='searchBar.q'
+      ng-class='{keep: searchBar.q != undefined}'
+    )

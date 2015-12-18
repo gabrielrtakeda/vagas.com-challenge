@@ -1,0 +1,27 @@
+section.videos(
+  ng-controller='VideosController as videos'
+)
+  header
+    h1 Todos os vídeos do Canal
+
+  article
+    .video-thumbnails-container
+      video-thumbnail.col-md-4.col-sm-6.col-xs-12(
+        ng-repeat='item in videos.list'
+        description='{{item.description}}'
+        publishedAt='{{item.publishedAt}}'
+        src='{{item.src}}'
+        thumbnail='{{item.thumbnail}}'
+        title='{{item.title}}'
+        view-count='{{item.viewCount}}'
+      )
+
+    .load.col-md-offset-3.col-md-6(
+      ng-class='{request: videos.spinner === true}'
+    )
+      .spinner
+      button.btn.btn-default.form-control(
+        ng-click='videos.loadMoreVideos()',
+        ng-class='{finish: videos.finish === true}'
+      )
+        | Carregar mais vídeos...

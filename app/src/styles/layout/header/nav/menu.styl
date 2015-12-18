@@ -1,0 +1,30 @@
+body
+  > header
+    nav
+      .menu
+        fontsize(16px)
+
+        .dropdown
+          height header-height
+          vertical-align middle
+
+          &:hover .dropdown-toggle
+            opacity .5
+
+          &:hover .dropdown-menu
+            display block
+
+          .dropdown-toggle
+            color #fff
+            padding-top 17px
+            padding-bottom 16px
+
+            &:hover, &:focus
+              background none
+
+            > span.text
+              vertical-align: top;
+
+            > .glyphicon
+              font-size(18px)
+              margin-left 5px

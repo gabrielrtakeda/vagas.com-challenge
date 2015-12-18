@@ -1,0 +1,29 @@
+#modal.modal(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+          span.icon-close
+
+      .modal-body
+        fluid-video(
+          width='{{modalController.video.width}}'
+          height='{{modalController.video.height}}'
+          src='{{modalController.video.src}}'
+        )
+
+        h4
+          .title {{modalController.video.title}}
+          .infos
+            span.icon-views(
+              uib-tooltip='{{modalController.video.viewCount}}',
+              tooltip-placement='top',
+              tooltip-trigger='mouseenter'
+            )
+            span.icon-date(
+              uib-tooltip='{{modalController.video.publishedAt}}',
+              tooltip-placement='top',
+              tooltip-trigger='mouseenter'
+            )
+
+        p(ng-bind-html='modalController.video.description')

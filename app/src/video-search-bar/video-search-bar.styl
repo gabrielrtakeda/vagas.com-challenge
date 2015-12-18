@@ -1,0 +1,66 @@
+@import '../styles/variables/colors'
+@import '../styles/variables/sizes'
+@import '../styles/mixins'
+
+body
+  > header
+    nav
+      video-search-bar
+        height 56px
+        text-align right
+
+        .glyphicon-search
+          font-size(18px)
+          color #fff
+          position absolute
+          right 25px
+          top 50%
+          margin-top -9px
+
+          &:hover
+            opacity .5
+            text-decoration none
+
+          &:focus
+            text-decoration none
+
+        .q
+          background input-background
+          border 1px solid #fff
+          color #fff
+          opacity 0
+          width 0
+          padding 0
+          display inline
+          remove-input-glow()
+
+          &::-webkit-input-placeholder
+            color #fff
+
+          &.keep
+            opacity 1
+            -webkit-animation example .5s 1 alternate forwards
+            animation: example .5s 1 alternate forwards
+
+          &:focus
+            opacity 1
+            -webkit-animation example .5s 1 alternate forwards
+            animation: example .5s 1 alternate forwards
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example
+  from
+    width 0%
+    padding 0
+  to
+    width 100%
+    padding 6px 12px
+
+/* Standard syntax */
+@keyframes example
+  from
+    width 0%
+    padding 0
+  to
+    width 100%
+    padding 6px 12px

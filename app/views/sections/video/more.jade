@@ -1,0 +1,25 @@
+section.more-videos.col-md-5.col-sm-12.col-xs-12(
+  ng-controller='MoreVideosController as moreVideos'
+)
+  header
+    h1 + Vídeos
+
+  article(ng-class='{finish: moreVideos.finish === true}')
+    .video-thumbnails-container
+      video-thumbnail(
+        ng-repeat='item in moreVideos.list'
+        description='{{item.description}}'
+        publishedAt='{{item.publishedAt}}'
+        src='{{item.src}}'
+        thumbnail='{{item.thumbnail}}'
+        title='{{item.title}}'
+        view-count='{{item.viewCount}}'
+      )
+
+    .load(ng-class='{request: moreVideos.spinner === true}')
+      .spinner
+      button.btn.btn-default.form-control(
+        ng-click='moreVideos.loadMoreVideos()'
+      )
+        | Carregar mais vídeos...
+

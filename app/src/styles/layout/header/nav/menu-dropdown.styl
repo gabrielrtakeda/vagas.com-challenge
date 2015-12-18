@@ -1,0 +1,45 @@
+body
+  > header
+    nav
+      .menu
+        .dropdown-menu
+          box-shadow(none)
+          top 56px
+          width 270px
+          padding 8px
+
+          li
+            a
+              font-size(16px)
+              color font-color
+              line-height 25px
+              display block
+              vertical-align middle
+              padding 10px 20px
+              border-radius(5px)
+              margin 0
+
+              &:active, &:focus
+                background #e6e6e6
+
+              > div[class*='icon-']
+                font-size(21px)
+                display inline-block
+                color base-color
+                vertical-align text-bottom
+                margin-right 7px
+
+            & + li a
+              margin-top 8px
+
+          &:before
+            carot-top(10px, dropdown-border-color)
+            position absolute
+            right 10px
+            top -20px
+
+          &:after
+            carot-top(10px, #fff)
+            position absolute
+            right 10px
+            top -19px

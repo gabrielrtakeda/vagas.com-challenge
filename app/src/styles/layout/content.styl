@@ -1,0 +1,38 @@
+h1, h2, h3, h4, h5
+  color base-color
+  font-family 'Titillium Web', sans-serif
+
+h1
+  margin-bottom 30px
+  font-size(36px)
+
+.spinner {
+  display none
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  background-color: #a8395c;
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}

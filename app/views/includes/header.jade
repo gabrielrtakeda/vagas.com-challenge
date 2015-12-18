@@ -1,0 +1,26 @@
+header
+  .container
+    .row
+      section.col-md-3.col-sm-3.col-xs-3
+        a(href='/')
+          .logo
+
+      nav.col-md-5.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-1
+        .container-fluid
+          video-search-bar.col-md-9.col-sm-9.col-xs-9
+
+          .menu.col-md-3.col-sm-3.col-xs-3
+            ul.nav.navbar-nav.navbar-right
+              li.dropdown
+                a.dropdown-toggle(href="#")
+                  span.text Menu
+                  span.glyphicon.glyphicon-menu-hamburger
+                ul.dropdown-menu
+                  li
+                    a(href='/destaques')
+                      .icon-star
+                      | Destaques
+                  li
+                    a(href='/videos')
+                      .icon-play
+                      | Vídeos
