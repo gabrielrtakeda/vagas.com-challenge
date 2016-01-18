@@ -32,3 +32,6 @@ Para gerar o build via webpack, após instalar as dependências, execute
 `npm run webpack-dev` para gerar o bundle e entrar em modo de watch, ou seja
 toda e qualquer alteração que for feita no diretório de contexto do webpack,
 será identificada e automaticamente ao bundle.
+
+# Live demo
+https://gentle-forest-4225.herokuapp.com/
